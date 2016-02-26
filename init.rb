@@ -18,7 +18,7 @@ class Heroku::Command::BashUtils < Heroku::Command::Run
     <<-CMD
 mkdir vim
 curl https://s3.amazonaws.com/heroku-vim/vim-7.3.tar.gz --location --silent | tar xz -C vim
-curl https://s3.amazonaws.com/backups.openredis.com/redis-cli/redis-cli > redis-cli
+curl https://s3.amazonaws.com/backups.openredis.com/redis-cli/redis-cli --silent > redis-cli
 chmod +x redis-cli
 export PATH=$PATH:/app/vim/bin:/app/
 bash
